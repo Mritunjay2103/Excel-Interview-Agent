@@ -1,0 +1,196 @@
+{
+  "categories": {
+    "formulas": {
+      "name": "Excel Formulas & Functions",
+      "description": "Questions about Excel formulas, functions, and calculations"
+    },
+    "pivot_tables": {
+      "name": "Pivot Tables & Data Analysis",
+      "description": "Questions about pivot tables, data analysis, and reporting"
+    },
+    "charts": {
+      "name": "Charts & Visualization",
+      "description": "Questions about creating and customizing charts and graphs"
+    },
+    "data_management": {
+      "name": "Data Management",
+      "description": "Questions about data import, cleaning, and organization"
+    },
+    "advanced_features": {
+      "name": "Advanced Features",
+      "description": "Questions about advanced Excel features and automation"
+    }
+  },
+  "questions": [
+    {
+      "id": "q_formula_vlookup_1",
+      "category": "formulas",
+      "difficulty": "beginner",
+      "question": "What is VLOOKUP and how do you use it?",
+      "expectedAnswer": "VLOOKUP is a function that searches for a value in the first column of a table and returns a value in the same row from a specified column. Syntax: VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])",
+      "keyPoints": ["lookup value", "table array", "column index", "exact match", "approximate match"],
+      "example": "VLOOKUP(A2, B2:E10, 3, FALSE) looks up A2 in column B and returns the value from column D (3rd column)"
+    },
+    {
+      "id": "q_formula_if_1",
+      "category": "formulas",
+      "difficulty": "beginner",
+      "question": "Explain the IF function and provide an example.",
+      "expectedAnswer": "The IF function performs a logical test and returns one value if TRUE and another if FALSE. Syntax: IF(logical_test, value_if_true, value_if_false)",
+      "keyPoints": ["logical test", "true value", "false value", "nested IF", "logical operators"],
+      "example": "IF(A1>50, 'Pass', 'Fail') returns 'Pass' if A1 is greater than 50, otherwise 'Fail'"
+    },
+    {
+      "id": "q_formula_sumif_1",
+      "category": "formulas",
+      "difficulty": "intermediate",
+      "question": "What is the difference between SUM and SUMIF? When would you use SUMIF?",
+      "expectedAnswer": "SUM adds all values in a range, while SUMIF adds values that meet specific criteria. SUMIF is useful for conditional summing based on criteria in another column.",
+      "keyPoints": ["conditional summing", "criteria", "range", "sum_range", "wildcards"],
+      "example": "SUMIF(A1:A10, '>100', B1:B10) sums values in B1:B10 where corresponding A values are greater than 100"
+    },
+    {
+      "id": "q_formula_index_match_1",
+      "category": "formulas",
+      "difficulty": "advanced",
+      "question": "Explain INDEX and MATCH functions and how they work together. Why might you use them instead of VLOOKUP?",
+      "expectedAnswer": "INDEX returns a value from a specific position in a range. MATCH finds the position of a value in a range. Together, they can look up values more flexibly than VLOOKUP, allowing left-to-right and right-to-left lookups.",
+      "keyPoints": ["index function", "match function", "flexible lookup", "left lookup", "array formulas"],
+      "example": "INDEX(C1:C10, MATCH(A1, B1:B10, 0)) finds A1 in column B and returns corresponding value from column C"
+    },
+    {
+      "id": "q_pivot_basic_1",
+      "category": "pivot_tables",
+      "difficulty": "beginner",
+      "question": "What is a pivot table and what are its main components?",
+      "expectedAnswer": "A pivot table is a data summarization tool that allows you to reorganize and summarize data. Main components include: Rows, Columns, Values, and Filters.",
+      "keyPoints": ["data summarization", "rows", "columns", "values", "filters", "drag and drop"],
+      "example": "Create a pivot table to show sales by region and product category"
+    },
+    {
+      "id": "q_pivot_calculations_1",
+      "category": "pivot_tables",
+      "difficulty": "intermediate",
+      "question": "How do you add calculated fields to a pivot table?",
+      "expectedAnswer": "Right-click in the pivot table, select 'Calculated Field', enter a name and formula. The formula can reference other fields in the pivot table using field names in square brackets.",
+      "keyPoints": ["calculated field", "formula", "field references", "right-click menu", "brackets"],
+      "example": "Create a calculated field 'Profit Margin' = [Profit]/[Sales]*100"
+    },
+    {
+      "id": "q_pivot_grouping_1",
+      "category": "pivot_tables",
+      "difficulty": "intermediate",
+      "question": "How do you group data in a pivot table by date ranges?",
+      "expectedAnswer": "Select the date column in the pivot table, right-click and choose 'Group'. Select the grouping options like months, quarters, or years. You can also create custom date ranges.",
+      "keyPoints": ["grouping", "date ranges", "months", "quarters", "years", "custom ranges"],
+      "example": "Group sales data by quarters to see quarterly performance"
+    },
+    {
+      "id": "q_chart_types_1",
+      "category": "charts",
+      "difficulty": "beginner",
+      "question": "What are the different types of charts in Excel and when would you use each?",
+      "expectedAnswer": "Common chart types include: Column/Bar (comparisons), Line (trends over time), Pie (parts of whole), Scatter (correlations), Area (cumulative data). Choose based on data type and message you want to convey.",
+      "keyPoints": ["column charts", "line charts", "pie charts", "scatter plots", "area charts", "data visualization"],
+      "example": "Use line chart for sales trends over months, pie chart for market share percentages"
+    },
+    {
+      "id": "q_chart_customization_1",
+      "category": "charts",
+      "difficulty": "intermediate",
+      "question": "How do you customize chart elements like axes, legends, and data labels?",
+      "expectedAnswer": "Right-click on chart elements to access formatting options. Use Chart Tools > Design and Format tabs. Double-click elements for detailed formatting. Use the + button for quick element toggles.",
+      "keyPoints": ["right-click", "format options", "chart tools", "design tab", "format tab", "element toggles"],
+      "example": "Format axis labels, change colors, add data labels, modify legend position"
+    },
+    {
+      "id": "q_data_validation_1",
+      "category": "data_management",
+      "difficulty": "intermediate",
+      "question": "What is data validation and how do you set it up?",
+      "expectedAnswer": "Data validation restricts the type of data that can be entered in a cell. Go to Data > Data Validation, choose criteria (list, number range, date, etc.), and set input/error messages.",
+      "keyPoints": ["data restriction", "criteria", "list validation", "number ranges", "error messages", "input messages"],
+      "example": "Create a dropdown list for 'Status' column with options: Active, Inactive, Pending"
+    },
+    {
+      "id": "q_data_cleaning_1",
+      "category": "data_management",
+      "difficulty": "intermediate",
+      "question": "What are some common data cleaning techniques in Excel?",
+      "expectedAnswer": "Common techniques include: Remove duplicates, Find and Replace, Text to Columns, TRIM function, CONCATENATE, data validation, conditional formatting to identify issues, and using filters to find anomalies.",
+      "keyPoints": ["remove duplicates", "find and replace", "text to columns", "trim function", "concatenate", "conditional formatting"],
+      "example": "Clean a list of email addresses by removing duplicates and trimming extra spaces"
+    },
+    {
+      "id": "q_conditional_formatting_1",
+      "category": "advanced_features",
+      "difficulty": "intermediate",
+      "question": "How do you use conditional formatting to highlight data based on criteria?",
+      "expectedAnswer": "Select data range, go to Home > Conditional Formatting, choose rule type (cell values, formulas, etc.), set conditions and formatting. Use formulas for complex conditions.",
+      "keyPoints": ["conditional formatting", "rules", "cell values", "formulas", "highlighting", "data bars"],
+      "example": "Highlight cells with values above average in red, below average in green"
+    },
+    {
+      "id": "q_macros_1",
+      "category": "advanced_features",
+      "difficulty": "advanced",
+      "question": "What are Excel macros and how do you create them?",
+      "expectedAnswer": "Macros are recorded sequences of actions that can be replayed. Enable Developer tab, go to Developer > Record Macro, perform actions, stop recording. Macros can be run with buttons or keyboard shortcuts.",
+      "keyPoints": ["macros", "record actions", "developer tab", "VBA", "automation", "replay"],
+      "example": "Create a macro to format a report with specific headers, colors, and layout"
+    },
+    {
+      "id": "q_array_formulas_1",
+      "category": "advanced_features",
+      "difficulty": "advanced",
+      "question": "What are array formulas and when would you use them?",
+      "expectedAnswer": "Array formulas perform calculations on multiple values simultaneously. They're useful for complex calculations that would require multiple regular formulas. Use Ctrl+Shift+Enter to enter them.",
+      "keyPoints": ["array formulas", "multiple values", "complex calculations", "ctrl+shift+enter", "efficiency"],
+      "example": "Use array formula to find the maximum value in a range that meets multiple criteria"
+    },
+    {
+      "id": "q_power_query_1",
+      "category": "advanced_features",
+      "difficulty": "advanced",
+      "question": "What is Power Query and how does it help with data analysis?",
+      "expectedAnswer": "Power Query is a data connection and preparation tool that allows you to connect to various data sources, transform data, and load it into Excel. It's useful for cleaning, merging, and reshaping data from multiple sources.",
+      "keyPoints": ["power query", "data connection", "data transformation", "multiple sources", "data modeling"],
+      "example": "Use Power Query to combine data from multiple CSV files and clean it before analysis"
+    }
+  ],
+  "evaluationCriteria": {
+    "correctness": {
+      "weight": 0.4,
+      "description": "Accuracy of the technical answer and understanding of concepts",
+      "levels": {
+        "excellent": "Fully correct with comprehensive understanding",
+        "good": "Mostly correct with minor gaps",
+        "satisfactory": "Generally correct but missing some details",
+        "needs_improvement": "Partially correct with significant gaps",
+        "incorrect": "Mostly or completely incorrect"
+      }
+    },
+    "depth": {
+      "weight": 0.3,
+      "description": "Thoroughness and detail level of the response",
+      "levels": {
+        "excellent": "Comprehensive with examples and edge cases",
+        "good": "Detailed with good examples",
+        "satisfactory": "Adequate detail with basic examples",
+        "needs_improvement": "Surface level with minimal detail",
+        "incorrect": "Very brief or no detail"
+      }
+    },
+    "clarity": {
+      "weight": 0.3,
+      "description": "How well the answer is explained and communicated",
+      "levels": {
+        "excellent": "Clear, well-structured, easy to follow",
+        "good": "Mostly clear with good organization",
+        "satisfactory": "Generally clear but could be better organized",
+        "needs_improvement": "Somewhat unclear or poorly organized",
+        "incorrect": "Confusing or very difficult to understand"
+      }
+    }
+  }
+}
